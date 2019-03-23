@@ -1,0 +1,36 @@
+{
+  "name": "day-2",
+  "version": "1.0.0",
+  "description": "User Story:  As a seller I want to be able to add an advertisement to sell something. As a buyer I want to be able to view a list of advertisements as the first thing I see in the app. As a seller I want to add a title, description, picture (url), price, email address and phone number to my advertisement. As a buyer I want to view the title and price in the advertisement list. As a buyer I want to be able to click on an advertisement and be able to see the description, picture (url), price, email address and phone number.",
+  "main": "target/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "postinstall": "tsc -p ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^2.2.3",
+    "@types/bcrypt": "^3.0.0",
+    "@types/jsonwebtoken": "^8.3.2",
+    "@types/koa": "^2.0.48",
+    "@types/koa-bodyparser": "^4.2.2",
+    "@types/koa-multer": "^1.0.0",
+    "@types/koa-router": "^7.0.40",
+    "bcrypt": "^3.0.5",
+    "jsonwebtoken": "^8.5.1",
+    "kcors": "^2.2.2",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-multer": "^1.0.2",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.6",
+    "pg": "^7.9.0",
+    "routing-controllers": "^0.7.7",
+    "typeorm": "^0.2.15",
+    "typescript": "^3.3.4000"
+  },
+  "devDependencies": {}
+}
