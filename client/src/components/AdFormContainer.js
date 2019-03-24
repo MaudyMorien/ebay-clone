@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { createAdd } from '../actions/adds'
-import AddForm from './AddForm'
+import { createAd } from '../actions/ads'
+import AdForm from './AdForm'
 
-class AddFormContainer extends React.Component {
+class AdFormContainer extends React.Component {
     state = {
         title: '',
         picture: '',
@@ -18,9 +18,9 @@ class AddFormContainer extends React.Component {
         })
     }
 
-    onSubmit = (add) => {
-        add.preventDefault()
-        this.props.createAdd(this.state)
+    onSubmit = (ad) => {
+        ad.preventDefault()
+        this.props.createAd(this.state)
         this.setState({
             title: '',
             picture: '',
@@ -31,7 +31,7 @@ class AddFormContainer extends React.Component {
     }
 
     render() {
-        return (<AddForm
+        return (<AdForm
             onSubmit={this.onSubmit}
             onChange={this.onChange}
             values={this.state}
@@ -39,4 +39,4 @@ class AddFormContainer extends React.Component {
     }
 }
 
-export default connect(null, {createAdd})(AddFormContainer)
+export default connect(null, {createAd})(AdFormContainer)
