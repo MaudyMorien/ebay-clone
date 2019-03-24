@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class AddForm extends Component {
+export default class AdForm extends Component {
 
     render() {
         return <form onSubmit={this.props.onSubmit}>

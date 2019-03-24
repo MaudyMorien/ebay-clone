@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import store from './store'
 import { Provider } from 'react-redux'
 import { Route } from 'react-router-dom'
-import AddsListContainer from './components/AddsListContainer'
-import AddFormContainer from './components/AddFormContainer'
+import AdsListContainer from './components/AdsListContainer'
+import AdFormContainer from './components/AdFormContainer'
+import AdDetailsContainer from './components/AdDetailsContainer'
 
 class App extends Component {
   render() {
@@ -12,8 +13,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
         </header>
-        <Route path="/" exact component={AddsListContainer} />
-        <Route path="/" exact component={AddFormContainer} />
+        <Route path="/" exact component={AdsListContainer} />
+        <Route path="/" exact component={AdFormContainer} />
+        <Route path="/ads/:id" exact component={AdDetailsContainer} />
       </div>
       </Provider>
     );

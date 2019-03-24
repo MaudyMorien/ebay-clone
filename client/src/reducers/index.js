@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'
-import adds from './adds'
+import ads from './ads'
 
 export default combineReducers({
-    adds
+    ads
 })

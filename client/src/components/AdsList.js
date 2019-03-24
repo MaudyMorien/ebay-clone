@@ -1,13 +1,13 @@
 import React, { Component }  from 'react'
 import { Link } from 'react-router-dom'
 
-export default class AddsList extends Component{
+export default class AdsList extends Component{
     render() {
-        if (this.props.adds) {
+        if (this.props.ads) {
             return <ul> 
-                {this.props.adds.map((add, index) => {
-                    return <Link to={`/${add.id}`} key={index}>
-                        <li>{add.title}{` $${add.price}`}
+                {this.props.ads.map((ad, index) => {
+                    return <Link to={`/${ad.id}`} key={index}>
+                        <li>{ad.title}{` $${ad.price}`}
                         </li>
                 </Link>})}
             </ul>

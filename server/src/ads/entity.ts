@@ -3,7 +3,7 @@ import { IsString, IsEmail, IsNumber, IsUrl } from 'class-validator'
 import { BaseEntity } from 'typeorm/repository/BaseEntity'
 
 @Entity()
-export class Add extends BaseEntity {
+export class Ad extends BaseEntity {
 
   @PrimaryGeneratedColumn()
   id?: number
