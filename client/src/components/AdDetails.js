@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-    import AdForm from './AdForm'
+// import AdForm from './AdForm'
 
 export default class AdDetails extends Component {
     render() {
@@ -7,13 +7,14 @@ export default class AdDetails extends Component {
 
         const { ad } = this.props
         if (ad) {
-            if (this.props.state.editMode) {
-                return <AdForm onSubmit={this.props.onSubmit}
-                    onChange={this.props.onChange}
-                    values={this.props.state.formValues} />
-            }
-
+            // if (this.props.state.editMode) {
+            //     return <AdForm onSubmit={this.props.onSubmit}
+            //         onChange={this.props.onChange}
+            //         values={this.props.state.formValues} />
+            // }
+            
             return <div>
+                
                 <h1>{ad.title}</h1>
                 <i>{ad.picture}</i>
                 <p>price: {ad.price}</p>

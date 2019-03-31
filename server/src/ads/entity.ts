@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
-import { IsString, IsEmail, IsNumber, IsUrl } from 'class-validator'
+// import { IsString, IsEmail, IsNumber, IsUrl } from 'class-validator'
 import { BaseEntity } from 'typeorm/repository/BaseEntity'
 
 @Entity()
@@ -8,23 +8,23 @@ export class Ad extends BaseEntity {
   @PrimaryGeneratedColumn()
   id?: number
 
-  @IsString()
+  // @IsString()
   @Column('text')
   title: string
 
-  @IsUrl()
+  // @IsUrl()
   @Column('text')
   picture: string
 
-  @IsNumber()
+  // @IsNumber()
   @Column('integer')
   price: number
 
-  @IsEmail()
+  // @IsEmail()
   @Column('text')
   email: string
 
-  @IsNumber()
+  // @IsNumber()
   @Column('integer')
   phoneNumber: number
 }

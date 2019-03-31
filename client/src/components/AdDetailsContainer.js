@@ -16,7 +16,6 @@ class AdDetailsContainer extends React.Component {
   }
 
   componentDidMount() {
-    console.log('this.props',this.props)
     this.props.loadSingleAd(Number(this.props.match.params.id))
   }
 
@@ -57,9 +56,10 @@ class AdDetailsContainer extends React.Component {
   }
 
   render() {
+    console.log('this.props render', this.props)
     return (<AdDetails
-      onDelete={this.onDelete}
       ad={this.props.ad}
+      onDelete={this.onDelete}
       onEdit={this.onEdit}
       onSubmit={this.onSubmit}
       onChange={this.onChange}
@@ -68,8 +68,10 @@ class AdDetailsContainer extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  ad: state.ad
-})
+const mapStateToProps = state => {
+  return {
+    ad: state.ad
+  }
+}
 
 export default connect(mapStateToProps, { loadSingleAd, updateAd, deleteAd })(AdDetailsContainer)
