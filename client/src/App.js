@@ -11,8 +11,6 @@ class App extends Component {
     return (
       <Provider store={store}>
       <div className="App">
-        <header className="App-header">
-        </header>
         <Route path="/" exact component={AdsListContainer} />
         <Route path="/" exact component={AdFormContainer} />
         <Route path="/ads/:id" exact component={AdDetailsContainer} />
@@ -22,4 +20,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App

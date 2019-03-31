@@ -6,26 +6,34 @@ export default class AdController {
 
     @Get('/ads')
     async allAds() {
-        const ad: Ad[] = await Ad.find()
-        return ad
+        const ads: Ad[] = await Ad.find()
+        return { ads }
     }
     
+    // @Get('/ads/:id')
+    // async getAd(
+    //     @Param('id') id: number
+    // ) {
+    //     const singleAd = await Ad.findOne(id)
+    //     if (!singleAd) throw new NotFoundError('Cannot find ad')
+    //     return singleAd
+    // }
+
     @Get('/ads/:id')
-    getPage(
-        @Param('id') id: number
+    getAd(
+      @Param('id') id: number
     ) {
-        return Ad.findOne(id)
+      return Ad.findOne(id)
     }
 
     @Put('/ads/:id')
-    async updatePage(
+    async updateAds(
         @Param('id') id: number,
         @Body() update: Partial<Ad>
     ) {
-        const ad = await Ad.findOne(id)
-        if (!ad) throw new NotFoundError('Cannot find page')
-
-        return Ad.merge(ad, update).save()
+        const updateAd = await Ad.findOne(id)
+        if (!updateAd) throw new NotFoundError('Cannot update ad')
+        return Ad.merge(updateAd, update).save()
     }
     @Post('/ads')
     @HttpCode(201)

@@ -6,7 +6,7 @@ export default class AdsList extends Component{
         if (this.props.ads) {
             return <ul> 
                 {this.props.ads.map((ad, index) => {
-                    return <Link to={`/${ad.id}`} key={index}>
+                    return <Link to={`/ads/${ad.id}`} key={index}>
                         <li>{ad.title}{` $${ad.price}`}
                         </li>
                 </Link>})}
